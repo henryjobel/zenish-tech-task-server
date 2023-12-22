@@ -27,7 +27,7 @@ const client = new MongoClient(uri, {
 async function run() {
     try {
 
-        //change menuCollection with database name and collection.
+        
         const taskCollection = client.db('taskyDB').collection("task")
 
         app.get('/task/:email', async (req, res) => {
@@ -72,8 +72,8 @@ async function run() {
 
 
         // Send a ping to confirm a successful connection
-        await client.db("admin").command({ ping: 1 });
-        console.log("Pinged your deployment. You successfully connected to MongoDB!");
+        // await client.db("admin").command({ ping: 1 });
+        // console.log("Pinged your deployment. You successfully connected to MongoDB!");
     } finally {
         // Ensures that the client will close when you finish/error
         // await client.close();
